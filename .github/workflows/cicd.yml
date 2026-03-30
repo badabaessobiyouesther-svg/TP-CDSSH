@@ -34,8 +34,8 @@ jobs:
            password: ${{ secrets.DOCKERHUB_TOKEN }}
        - name: Build and push Docker image
          run: |
-            docker build -t usernameDocker/flask_devops_demo:latest .
-            docker push usernameDocker/flask_devops_demo:latest
+            docker build -t essobiyoudocker/flask_devops_demo:latest .
+            docker push essobiyoudocker/flask_devops_demo:latest
        - name: Deploy via SSH
          run: |
            echo "${{secrets.SSH_KEY}}" > key.pem
